@@ -1,0 +1,196 @@
+[1605189298.529][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 37549
+[1605189298.529][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1605189299.274][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605189296683_1680_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605189296683_1680_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1605189299.277][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605189296683_1680_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1605189299.285][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1605189299.287][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\sasha\AppData\Local\Temp\scoped_dir14264_1464993108" data:,
+[1605189299.843][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1605189301.848][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1605189303.858][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.193",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\sasha\\AppData\\Local\\Temp\\scoped_dir14264_1464993108"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:63389"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "90801bed4357eb8cb5d21632ab322f7f"
+}
+[1605189303.900][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1605189303.900][INFO]: Waiting for pending navigations...
+[1605189303.901][INFO]: Done waiting for pending navigations. Status: ok
+[1605189304.012][INFO]: Waiting for pending navigations...
+[1605189304.013][INFO]: Done waiting for pending navigations. Status: ok
+[1605189304.013][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE SetWindowRect {
+   "height": 770,
+   "width": 1368,
+   "x": 8,
+   "y": 8
+}
+[1605189304.018][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1605189304.018][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE SetTimeouts
+[1605189304.026][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND Navigate {
+   "url": "http://kv.ee/"
+}
+[1605189304.026][INFO]: Waiting for pending navigations...
+[1605189304.027][INFO]: Done waiting for pending navigations. Status: ok
+[1605189304.466][INFO]: Waiting for pending navigations...
+[1605189305.915][INFO]: Done waiting for pending navigations. Status: ok
+[1605189305.915][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE Navigate
+[1605189305.929][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND FindElements {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[1]/div/div[7]/ul/li"
+}
+[1605189305.929][INFO]: Waiting for pending navigations...
+[1605189305.951][INFO]: Done waiting for pending navigations. Status: ok
+[1605189305.976][INFO]: Waiting for pending navigations...
+[1605189305.990][INFO]: Done waiting for pending navigations. Status: ok
+[1605189305.990][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE FindElements [ {
+   "element-6066-11e4-a52e-4f735466cecf": "3f635604-8a35-4653-bc2d-7346dee7474a"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "e0d4e582-e78b-4d5d-9c6a-c23202821643"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "5919c5cb-5e60-4cc4-a1d2-7536ed969941"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "a20aa248-eaba-4a0b-b6d1-41869817d0b7"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "f41a8029-0fbf-4c78-aaea-5de18c8e1c97"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "41d235b0-ea75-4cc1-9ceb-b49bff982785"
+}, {
+   "element-6066-11e4-a52e-4f735466cecf": "077d1c52-efe1-4829-9133-6333d07b2ab8"
+} ]
+[1605189306.013][INFO]: [90801bed4357eb8cb5d21632ab322f7f] COMMAND Quit {
+
+}
+[1605189306.105][INFO]: [90801bed4357eb8cb5d21632ab322f7f] RESPONSE Quit
