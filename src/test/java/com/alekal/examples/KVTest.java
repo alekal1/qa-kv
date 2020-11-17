@@ -4,12 +4,13 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.$;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
+
+import com.codeborne.selenide.*;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -19,12 +20,14 @@ import static org.hamcrest.Matchers.hasSize;
 
 public class KVTest {
 
-    private final Integer WAIT = 1;
-    private final List<SelenideElement> postersOfHouse =  $$("tbody > tr").filterBy(Condition.cssClass("object-item"));
+    private final Integer WAIT_TIME = 3000;
+    private final ElementsCollection postersOfHouse =  $$("tbody > tr").filterBy(Condition.cssClass("object-item"));
+    private final SelenideElement searchInput = $("#keyword");
 
     @Before
     public void setUp() {
-        open("http://kv.ee/");
+        Configuration.baseUrl = "http://kv.ee/";
+        open("");
     }
 
     @AfterClass
@@ -32,28 +35,28 @@ public class KVTest {
 
     @Test
     public void testSectionNumber() {
-        List<SelenideElement> sections = $$(".iscroller-wrapper > ul > li");
+        ElementsCollection sections = $$(".iscroller-wrapper > ul > li");
 
-        assertThat(sections, hasSize(7));
+        sections.shouldHaveSize(7);
     }
 
     @Test
     public void testNumberOfPostersValuable() throws InterruptedException {
-        SelenideElement searchInput = $("#keyword").setValue("tallinn");
+        searchInput.setValue("tallinn");
         searchInput.pressEnter();
 
-        TimeUnit.SECONDS.sleep(WAIT); // Because HTML DOM cannot load properly need to wait some time
 
-        assertThat(postersOfHouse, hasSize(50));
+        postersOfHouse.last().waitUntil(Condition.visible, WAIT_TIME);
+        postersOfHouse.shouldHaveSize(50);
     }
 
     @Test
     public void testNumberOfPostersNonValuable() throws InterruptedException {
-        SelenideElement searchInput = $("#keyword").setValue("123");
+        searchInput.setValue("123");
         searchInput.pressEnter();
-        TimeUnit.SECONDS.sleep(WAIT); // Because HTML DOM cannot load properly need to wait some time
 
-        assertThat(postersOfHouse, hasSize(0));
+        postersOfHouse.last().shouldBe(Condition.not(Condition.visible));
+        postersOfHouse.shouldHaveSize(0);
     }
 
     @Test
@@ -66,6 +69,6 @@ public class KVTest {
         maxPrice.setValue("-1");
         search.click();
 
-        assertThat(postersOfHouse, hasSize(0));
+        postersOfHouse.shouldHaveSize(0);
     }
 }
