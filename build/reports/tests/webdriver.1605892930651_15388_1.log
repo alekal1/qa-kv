@@ -1,0 +1,184 @@
+[1605892930.870][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 1513
+[1605892930.870][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1605892931.586][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605892929199_15388_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605892929199_15388_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1605892931.591][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\sasha\\IdeaProjects\\qa\\build\\downloads\\1605892929199_15388_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1605892931.598][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1605892931.599][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\sasha\AppData\Local\Temp\scoped_dir15828_1110527050" data:,
+[1605892932.184][WARNING]: This version of ChromeDriver has not been tested with Chrome version 87.
+[1605892932.190][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1605892934.247][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1605892936.293][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "87.0.4280.66",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\sasha\\AppData\\Local\\Temp\\scoped_dir15828_1110527050"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:65494"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "85860fdb8dc70194adbb652f52ca68c2"
+}
+[1605892936.350][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1605892936.350][INFO]: Waiting for pending navigations...
+[1605892936.351][INFO]: Done waiting for pending navigations. Status: ok
+[1605892936.469][INFO]: Waiting for pending navigations...
+[1605892936.470][INFO]: Done waiting for pending navigations. Status: ok
+[1605892936.470][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE SetWindowRect {
+   "height": 770,
+   "width": 1368,
+   "x": 8,
+   "y": 8
+}
+[1605892936.485][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1605892936.485][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE SetTimeouts
+[1605892936.500][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND Navigate {
+   "url": "http://kv.ee/"
+}
+[1605892936.500][INFO]: Waiting for pending navigations...
+[1605892936.501][INFO]: Done waiting for pending navigations. Status: ok
+[1605892937.227][INFO]: Waiting for pending navigations...
+[1605892939.849][INFO]: Done waiting for pending navigations. Status: ok
+[1605892939.849][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE Navigate
+[1605892939.888][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND FindElements {
+   "using": "css selector",
+   "value": "ul.filter(css class 'list') > li"
+}
+[1605892939.888][INFO]: Waiting for pending navigations...
+[1605892939.889][INFO]: Done waiting for pending navigations. Status: ok
+[1605892939.919][INFO]: Waiting for pending navigations...
+[1605892939.920][INFO]: Done waiting for pending navigations. Status: ok
+[1605892939.920][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE FindElements ERROR invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.66)
+[1605892939.945][INFO]: [85860fdb8dc70194adbb652f52ca68c2] COMMAND Quit {
+
+}
+[1605892940.047][INFO]: [85860fdb8dc70194adbb652f52ca68c2] RESPONSE Quit
