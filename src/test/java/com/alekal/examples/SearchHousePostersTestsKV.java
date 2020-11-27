@@ -1,7 +1,6 @@
 package com.alekal.examples;
 
 import com.alekal.examples.pages.MainPage;
-import com.alekal.examples.pages.PostersResultPage;
 import com.codeborne.selenide.*;
 
 import org.junit.AfterClass;
@@ -9,7 +8,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.Condition.visible;
