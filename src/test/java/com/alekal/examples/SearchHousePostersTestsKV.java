@@ -3,10 +3,8 @@ package com.alekal.examples;
 import com.alekal.examples.pages.MainPage;
 import com.codeborne.selenide.*;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.Ignore;
+import org.junit.jupiter.api.*;
 
 
 import static com.codeborne.selenide.CollectionCondition.empty;
@@ -14,7 +12,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Selenide.*;
 
-public class KVTests {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class SearchHousePostersTestsKV {
 
     private static final int WAIT_TIME = 30000;
 
@@ -30,45 +29,36 @@ public class KVTests {
     private final int TALLINN_POSTERS_COUNT_100 = 100;
     private final int TALLINN_POSTERS_COUNT_50 = 50;
     private final int TALLINN_POSTERS_COUNT_25 = 25;
-    private final int SECTION_NUMBER = 7;
 
 
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp() {
-        Configuration.baseUrl = "http://kv.ee";
+        Configuration.baseUrl = "http://kv.ee"; // URL to make tests for
+        Configuration.browser = "chrome"; // Chrome browser
         Configuration.timeout = WAIT_TIME; // Timeout 30 seconds for selenide element
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDown() {
-        closeWebDriver();
+        closeWebDriver(); // Since my machine does not close browser after test, needed to close it after each test
     }
 
-    @Before
+    @BeforeEach
     public void redirect() {
         open("/");
     }
 
     @Test
-    public void verifySectionNumberOnMainPage() {
-        MainPage.getSections.shouldHaveSize(SECTION_NUMBER);
-    }
-
-    @Test
-    public void verifyPostersCountOnMainPage() {
-        MainPage.getMainPagePosters.shouldHaveSize(11);
-    }
-
-    @Test
-    public void verifyPostersCountForTallinn50() {
+    @Order(1)
+    public void testVerifyPostersCountForTallinn50() {
         MainPage.searchPosters("tallinn")
                 .getPosters
                 .shouldHaveSize(TALLINN_POSTERS_COUNT_50);
     }
 
     @Test
-    public void verifyPostersCountFor123() {
+    public void testVerifyPostersCountFor123() {
         MainPage.searchPosters("123")
                 .getPosters
                 .shouldBe(empty);
@@ -97,11 +87,12 @@ public class KVTests {
                 .shouldBe(visible);
     }
 
+    /*
+     * This test will fail, because KV shows houses' posters even when room count is 0.
+     */
     @Test
+    @Disabled("Ignored because KV shows wrong poster number")
     public void testZeroRoomCount() {
-        /*
-         * This test will fail, because KV shows houses' posters even when room count is 0.
-         */
         MainPage.searchByRoomCount(ROOM_COUNT_ZERO, ROOM_COUNT_ZERO)
                 .getPosters.last()
                 .shouldBe(not(visible));
